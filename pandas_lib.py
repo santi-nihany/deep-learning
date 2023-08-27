@@ -26,3 +26,9 @@ print(dataFrame)
 # rename attributes with value 'Peru' to 'Perú'
 dataFrame = dataFrame.replace(to_replace='Peru', value='Perú')
 print(dataFrame)
+
+# generate files from dataFrame (csv, excel, json)
+dataFrame.to_csv('./dataFrameTab.csv', sep="\t", index=False)
+dataFrame.to_csv('./dataFrameSemiColon.csv', sep=";", index=False)
+dataFrame.to_excel('./dataFrame.xlsx', index=False)
+dataFrame.to_json('./dataFrame.json', orient='records')
