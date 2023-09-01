@@ -27,6 +27,9 @@ print(dataFrame)
 dataFrame = dataFrame.replace(to_replace='Peru', value='Perú')
 print(dataFrame)
 
+dataFrame.reset_index(drop=True, inplace=True)
+print(dataFrame)
+
 # generate files from dataFrame (csv, excel, json)
 dataFrame.to_csv('./dataFrameTab.csv', sep="\t", index=False)
 dataFrame.to_csv('./dataFrameSemiColon.csv', sep=";", index=False)
