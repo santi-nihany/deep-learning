@@ -23,14 +23,21 @@ y_train = Y.reshape(-1, 1)
 
 
 neurona = NeuronaLineal(alpha=0.01, n_iter=300, cotaE=1e-5,
-                        draw=1, title=["Matematicas", "Fisica"])
+                        draw=0, title=["Matematicas", "Fisica"])
 neurona.fit(x_train, y_train)
 
 print('w =', neurona.w_[0])
 print('b =', neurona.b_[0])
 
 
-actual = 0
+suma = 0
+dif = 0
 for i in range(0, len(x_train)):
-    print('x =', x_train[i], 'y =', y_train[i],
-          'y_pred =', neurona.predict(x_train[i]))
+    pred = neurona.predict(x_train[i])
+    print(' x =', x_train[i], 'y =', y_train[i],
+          'y_pred =', pred)
+    dif = y_train[i] - pred
+    suma += np.power(dif, 2)
+    print('gradiente estocastico: ', (-2) * x_train[i] * dif)
+
+print('Error cuadratico medio: ', suma/len(x_train))
