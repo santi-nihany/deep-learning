@@ -29,6 +29,9 @@ neurona.fit(x_train, y_train)
 print('w =', neurona.w_[0])
 print('b =', neurona.b_[0])
 
+# neurona.w_ = 0.79816056
+# neurona.b_ = 0.52217544
+
 
 suma = 0
 dif = 0
@@ -41,3 +44,4 @@ for i in range(0, len(x_train)):
     print('gradiente estocastico: ', (-2) * x_train[i] * dif)
 
 print('Error cuadratico medio: ', suma/len(x_train))
+print('Predict 9: ', neurona.predict(9))

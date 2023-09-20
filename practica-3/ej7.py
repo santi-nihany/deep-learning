@@ -36,7 +36,7 @@ neurona.fit(x_train2, y_train2)
 print('w_: ', neurona.w_)
 print('b_: ', neurona.b_)
 
-print('ECM de mi neurona NORMALIZADA LINEALMENTE CON MI AMIGO SKLEARN: ', fun.ECM(
+print('ECM de mi neurona NORMALIZADA LINEALMENTE CON MI AMIGO SKLEARN: ', fun.ECM_1(
     x_train2, y_train2, neurona.w_, neurona.b_), '\n')
 
 
@@ -58,5 +58,5 @@ print('w_: ', neurona.w_)
 print('b_: ', neurona.b_)
 
 
-print('ECM de mi neurona caserita: ', fun.ECM(
+print('ECM de mi neurona caserita: ', fun.ECM_1(
     x_train3, y_train3, neurona.w_, neurona.b_))
