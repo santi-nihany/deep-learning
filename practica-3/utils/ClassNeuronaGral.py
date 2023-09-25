@@ -82,7 +82,7 @@ class NeuronaGradiente(object):
                 errorXi = (target - salida)
 
                 update = self.alpha * errorXi * self.derivar(salida)
-                # y = (esperado - sigmoide(- (sum(wi*xi) + b) )) * alpha * derivada(sigmoide)
+
                 self.w_ += update * xi
                 self.b_ += update
 
