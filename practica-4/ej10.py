@@ -81,8 +81,8 @@ def generate_dataset(path_from, path_to):
     print('Archivo', os.path.basename(path_to), ' generado correctamente ✅\n')
 
 
-# generate_dataset(TRAIN_PATH, './dataFiles/fingers/train/train.csv')
-# generate_dataset(TEST_PATH, './dataFiles/fingers/test/test.csv')
+generate_dataset(TRAIN_PATH, './dataFiles/fingers/train/train.csv')
+generate_dataset(TEST_PATH, './dataFiles/fingers/test/test.csv')
 
 
 def train_MLP(path_train):
