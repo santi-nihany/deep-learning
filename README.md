@@ -1,4 +1,4 @@
-# Deep Learning Practices (2023) - UNLP
+# Deep Learning (2023) - UNLP
 
 This repository contains the practices and exercises completed as part of the "Deep Learning" course at the Universidad Nacional de La Plata (UNLP) in 2023.
 
